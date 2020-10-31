@@ -15,7 +15,7 @@ class ReportQueryParams {
   // class-transformer/validator has some weird issue with booleans so we use string for now
   @IsString()
   @IsOptional()
-  refresh?: string;
+  refresh?: boolean;
 }
 
 // can add really strict validation on realm/region if you wanted to
