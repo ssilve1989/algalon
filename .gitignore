@@ -4,3 +4,4 @@ backend/build/
 frontend/node_modules/
 
 config.json
+.env
