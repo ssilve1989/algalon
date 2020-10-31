@@ -41,9 +41,9 @@ class ReportCacheInterceptor implements NestInterceptor {
     )
   }
 
-  private updateCache(id: string, options: CachingConfig) {
+  private updateCache(key: string, options: CachingConfig) {
     return (source$: Observable<any>): Observable<any> => source$.pipe(
-      mergeMap((response) => from(this.cache.set(id, response, options)).pipe(mapTo(response)))
+      mergeMap((response) => from(this.cache.set(key, response, options)).pipe(mapTo(response)))
     )
   }
 }
